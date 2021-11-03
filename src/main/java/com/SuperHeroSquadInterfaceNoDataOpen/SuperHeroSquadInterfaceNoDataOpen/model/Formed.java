@@ -11,6 +11,6 @@ import javax.persistence.Table;
 public class Formed {
 
     @Column(name="formed")
-    private int formed;
+    private Long formedYear;
 
 }
