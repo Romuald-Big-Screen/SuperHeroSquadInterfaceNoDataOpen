@@ -2,7 +2,7 @@ package com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.
 
 import com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.model.Formed;
 import com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.repository.FormedRepositorie;
-import lombok.Data;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Optional;
 
-@Data
+
 @Service
 public class FormedService {
 

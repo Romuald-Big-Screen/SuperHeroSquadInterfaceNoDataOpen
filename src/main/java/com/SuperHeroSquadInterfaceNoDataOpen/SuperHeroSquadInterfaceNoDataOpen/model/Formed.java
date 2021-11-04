@@ -1,10 +1,10 @@
 package com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.model;
 
-import lombok.Data;
+
 
 import javax.persistence.*;
 
-@Data
+
 /*@Entity*/
 @Table(name = "formed")
 public class Formed {
@@ -13,7 +13,7 @@ public class Formed {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;*/
 
-    @Column(name = "formed")
+    @Column(name = "formedYear")
     private int formedYear;
 
 }
