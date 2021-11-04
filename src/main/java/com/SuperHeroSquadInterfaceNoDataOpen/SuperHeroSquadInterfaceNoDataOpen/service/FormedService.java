@@ -1,5 +1,6 @@
 package com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.service;
 
+import com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.model.Formed;
 import com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.repository.FormedRepositorie;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Optional;
 
 @Data
 @Service
@@ -15,20 +17,20 @@ public class FormedService {
     @Autowired
     private FormedRepositorie formedRepositorie;
 
-    public Optional<Employee> getEmployee(final Long id) {
-        return employeeRepository.findById(id);
+   /* public Optional<Formed> getFormed(final Long id) {
+        return formedRepositorie.findById(id);
+    }*/
+
+    public Iterable<Formed> getFormedYear() {
+        return formedRepositorie.findAll();
     }
 
-    public Iterable<Employee> getEmployees() {
-        return employeeRepository.findAll();
+    public void deleteFormed(final Long id) {
+        formedRepositorie.deleteById(id);
     }
 
-    public void deleteEmployee(final Long id) {
-        employeeRepository.deleteById(id);
-    }
-
-    public Employee saveEmployee(Employee employee) {
-        Employee savedEmployee = employeeRepository.save(employee);
-        return savedEmployee;
+    public Formed saveEmployee(Formed formed) {
+        Formed savedFormed = formedRepositorie.save(formed);
+        return savedFormed;
     }
 }

@@ -2,15 +2,18 @@ package com.SuperHeroSquadInterfaceNoDataOpen.SuperHeroSquadInterfaceNoDataOpen.
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
+/*@Entity*/
 @Table(name = "formed")
 public class Formed {
 
-    @Column(name="formed")
-    private Long formedYear;
+    /*@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;*/
+
+    @Column(name = "formed")
+    private int formedYear;
 
 }
